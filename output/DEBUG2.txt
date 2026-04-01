@@ -1,0 +1,61 @@
+You: що такє langchain оціни актуальність інформації у внутрішніх джерелах, порівнявши із інформацією в інтернеті
+[DEBUG]
+=== AGENT NODE ===
+[DEBUG] State messages count: 45
+[DEBUG] Last message types (up to 3): ['AIMessage', 'AIMessage', 'HumanMessage']
+[DEBUG] Last message roles (up to 3): ['ai', 'ai', 'human']
+[DEBUG] Response type: <class 'langchain_core.messages.ai.AIMessage'>
+[DEBUG] Tool calls: [{'name': 'knowledge_search_lc', 'args': {'query': 'LangChain'}, 'id': 'call_lO2SWmrv2gw3jTq9UKKhdFqe', 'type': 'tool_call'}, {'name': 'search_tool_lc', 'args': {'query': 'LangChain'}, 'id': 'call_JZdVQwpqB7jFV0PM63aZ12ei', 'type': 'tool_call'}]
+[DEBUG] → Переходимо до TOOL NODE
+[DEBUG]
+=== TOOL NODE ===
+[DEBUG] Executing tool: knowledge_search_lc with args: {'query': 'LangChain'}
+[DEBUG] knowledge_search called with query: LangChain
+[DEBUG] Tool result: [4 documents found]
+1. Source: langchain.pdf, page 0
+   Relevance: 0.9998
+2. Source: langchain.pdf, ...
+[DEBUG] Executing tool: search_tool_lc with args: {'query': 'LangChain'}
+[DEBUG] search_tool called with query: LangChain
+[DEBUG] Tool result: [{'title': 'LangChain', 'href': 'https://en.wikipedia.org/wiki/LangChain', 'body': "LangChain is a s...
+[DEBUG]
+=== AGENT NODE ===
+[DEBUG] State messages count: 48
+[DEBUG] Last message types (up to 3): ['AIMessage', 'ToolMessage', 'ToolMessage']
+[DEBUG] Last message roles (up to 3): ['ai', 'tool', 'tool']
+[DEBUG] Response type: <class 'langchain_core.messages.ai.AIMessage'>
+[DEBUG] Tool calls: []
+[DEBUG] → Переходимо до SUMMARIZER NODE
+[DEBUG]
+=== SUMMARIZER NODE ===
+[DEBUG] tool_results count: 2
+[DEBUG]
+--- tool_results[1] preview ---
+[4 documents found]
+1. Source: langchain.pdf, page 0
+   Relevance: 0.9998
+2. Source: langchain.pdf, page 0
+   Relevance: 0.8664
+3. Source: langchain.pdf, page 0
+   Relevance: 0.8557
+4. Source: langchain.pdf, page 3
+   Relevance: 0.8179
+
+[DEBUG]
+--- tool_results[2] preview ---
+[{'title': 'LangChain', 'href': 'https://en.wikipedia.org/wiki/LangChain', 'body': "LangChain is a software framework that helps facilitate the integration of large language models (LLMs) into applications. As a language model integration framework, LangChain's use-cases largely overlap with those of language models in general, including document analysis and summarization, chatbots, and code anal...
+
+[DEBUG] Final answer: LangChain — це програмний фреймворк, який спрощує інтеграцію великих мовних моделей (LLM) у різні до...
+[DEBUG]
+=== SAVE NODE ===
+[DEBUG] save_report_tool called with filename=langchain_програмний_фреймворк_2026-04-01_112433.md
+[DEBUG] Saved to: ✅ Файл збережено: C:\Users\HF\OneDrive\Iryna\ArchivData comp WINDOWS\Курсы\RobotDreams-2026\MULTI-AGENT SYSTEMS\Lektion 5\HT Lektion 5\output\langchain_програмний_фреймворк_2026-04-01_112433.md
+Agent: LangChain — це програмний фреймворк, який спрощує інтеграцію великих мовних моделей (LLM) у різні додатки. Він дозволяє створювати AI-агентів, які використовують LLM для різних завдань, таких як аналіз документів, створення чат-ботів та аналіз коду. LangChain є відкритим програмним забезпеченням, що робить його доступним для широкого кола розробників, які прагнуть швидко створювати додатки з використанням шаблонів та різних постачальників моделей.
+
+Інформація з внутрішніх джерел підтверджує ці дані, зазначаючи, що LangChain є фреймворком для інтеграції мовних моделей у додатки. Актуальність інформації у внутрішніх джерелах висока, оскільки вона узгоджується з даними, знайденими в інтернеті. Це свідчить про те, що LangChain активно використовується для спрощення розробки додатків з LLM, що підтверджується як внутрішніми, так і зовнішніми джерелами.
+
+### Джерела
+- Source: langchain.pdf, page 0, Relevance: 0.9998
+- [LangChain на Wikipedia](https://en.wikipedia.org/wiki/LangChain)
+- [LangChain на Grokipedia](https://grokipedia.com/page/LangChain)
+- [LangChain: A Practical Guide на LinkedIn](https://www.linkedin.com/pulse/lang-chain-practical-guide-building-llm-powered-shreya-srivastava-hfs4c)

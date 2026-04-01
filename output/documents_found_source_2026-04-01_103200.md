@@ -1,0 +1,13 @@
+[4 documents found]
+1. Source: large-language-model.pdf, page 0
+   Relevance: 0.9999
+   Excerpt: Large language model A large language model (LLM) is a computational model trained on a vast amount of data, designed for natural language processing tasks, especially language generation.[1][2] The largest and most capable LLMs are generative pre-trained transformers (GPTs) that...
+2. Source: large-language-model.pdf, page 4
+   Relevance: 0.9907
+   Excerpt: An LLM is a type of foundation model (large X model) trained on language. LLMs can be trained in different ways. In particular, GPT models are first pretrained to predict the next word on a large amount of data, before being fine-tuned.[49] Substantial infrastructure is necessary...
+3. Source: large-language-model.pdf, page 1
+   Relevance: 0.9803
+   Excerpt: The number of publications about large language models by year grouped by publication types The training compute of notable large models in FLOPs vs publication date over the period 2010–2024. For overall notable models (top left), frontier models (top right), top language models...
+4. Source: large-language-model.pdf, page 28
+   Relevance: 0.9787
+   Excerpt: 80. Wu, Tongshuang; et al. (2022-04-28). "PromptChainer: Chaining Large Language Model Prompts through Visual Programming" (https://doi.org/10.1145/3491101.3519729). CHI Conference on Human Factors in Computing Systems Extended Abstracts. Association for Computing Machinery. pp. ...

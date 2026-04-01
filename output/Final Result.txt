@@ -1,0 +1,29 @@
+main.py
+Research Agent (type 'exit' to quit)
+Debug mode: OFF
+Limits: max_iterations=10, tool_timeout=40s, wait=60+30s, thread_id=local-c0b3fbb2
+----------------------------------------
+Warming up RAG components (first run may take a few minutes)...
+Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 201/201 [00:00<00:00, 3142.55it/s]
+XLMRobertaForSequenceClassification LOAD REPORT from: BAAI/bge-reranker-base
+Key                             | Status     | Details
+--------------------------------+------------+--------
+roberta.embeddings.position_ids | UNEXPECTED |
+
+Notes:
+- UNEXPECTED:   can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+RAG warm-up completed.
+
+You: що такє langchain оціни актуальність інформації у внутрішніх джерелах, порівнявши із інформацією в інтернеті
+Agent: LangChain — це програмний фреймворк, який спрощує інтеграцію великих мовних моделей (LLM) у різноманітні додатки. Він надає можливості для створення AI-агентів, які можуть виконувати завдання, пов'язані з аналізом документів, створенням чат-ботів, аналізом коду та іншими функціями, що використовують мовні моделі. LangChain є відкритим програмним забезпеченням, що дозволяє розробникам легко інтегрувати різні моделі та інструменти для створення агентів.
+
+Інформація з внутрішніх джерел підтверджує ці дані, зазначаючи, що LangChain є фреймворком для інтеграції мовних моделей у додатки. Це свідчить про високу актуальність і узгодженість інформації з різних джерел.
+
+### Джерела
+- Source: langchain.pdf, page 0, Relevance: 0.9998
+- Source: langchain.pdf, page 0, Relevance: 0.8664
+- [LangChain на Wikipedia](https://en.wikipedia.org/wiki/LangChain)
+- [LangChain на Grokipedia](https://grokipedia.com/page/LangChain)
+- [Офіційний сайт LangChain](https://www.langchain.com/)
+- [GitHub - langchain-ai/langchain](https://github.com/langchain-ai/langchain)

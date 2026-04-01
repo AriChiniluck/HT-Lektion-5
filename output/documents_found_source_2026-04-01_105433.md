@@ -1,0 +1,13 @@
+[4 documents found]
+1. Source: retrieval-augmented-generation.pdf, page 0
+   Relevance: 1.0000
+   Excerpt: Retrieval-augmented generation Retrieval-augmented generation (RAG) is a technique that enables large language models (LLMs) to retrieve and incorporate new information from external data sources.[1] With RAG, LLMs first refer to a specified set of documents, then respond to user...
+2. Source: large-language-model.pdf, page 7
+   Relevance: 0.9993
+   Excerpt: similarly follow user instructions. Before the stream of User and Assistant lines, a chat context usually starts with a few lines of overarching instructions, from a role called "developer" or "system" to convey a higher authority than the user's input. This is called a "system p...
+3. Source: retrieval-augmented-generation.pdf, page 1
+   Relevance: 0.9979
+   Excerpt: Overview of RAG process, combining external documents and user input into an LLM prompt to get tailored output Retrieval-augmented generation (RAG) enhances large language models (LLMs) by incorporating an information-retrieval mechanism that allows models to access and utilize a...
+4. Source: retrieval-augmented-generation.pdf, page 5
+   Relevance: 0.9776
+   Excerpt: Analytic Sciences in TREC 2024 Retrieval Augmented Generation Track" (https://trec.nist.go v/pubs/trec33/index.html). NIST TREC 2024. Retrieved 15 March 2025. 11. Lee, Kenton; Chang, Ming-Wei; Toutanova, Kristina (2019). ""Latent Retrieval for Weakly Supervised Open Domain Questi...

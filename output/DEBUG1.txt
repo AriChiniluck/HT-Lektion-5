@@ -1,0 +1,53 @@
+[DEBUG]
+=== AGENT NODE ===
+[DEBUG] State messages count: 1
+[DEBUG] Last message types (up to 3): ['HumanMessage']
+[DEBUG] Last message roles (up to 3): ['human']
+[DEBUG] Response type: <class 'langchain_core.messages.ai.AIMessage'>
+[DEBUG] Tool calls: [{'name': 'knowledge_search_lc', 'args': {'query': 'langchain'}, 'id': 'call_TUducNv2w3A46fonS4Rkq7g0', 'type': 'tool_call'}]
+[DEBUG] → Переходимо до TOOL NODE
+[DEBUG]
+=== TOOL NODE ===
+[DEBUG] Executing tool: knowledge_search_lc with args: {'query': 'langchain'}
+[DEBUG] knowledge_search called with query: langchain
+[DEBUG] Tool result: [4 documents found]
+
+Source: langchain.pdf, page 0
+Relevance: 0.9997
+Excerpt: LangChain Deve...
+[DEBUG]
+=== AGENT NODE ===
+[DEBUG] State messages count: 3
+[DEBUG] Last message types (up to 3): ['HumanMessage', 'AIMessage', 'ToolMessage']
+[DEBUG] Last message roles (up to 3): ['human', 'ai', 'tool']
+[DEBUG] Response type: <class 'langchain_core.messages.ai.AIMessage'>
+[DEBUG] Tool calls: []
+[DEBUG] → Переходимо до SUMMARIZER NODE
+[DEBUG]
+=== SUMMARIZER NODE ===
+[DEBUG] tool_results count: 1
+[DEBUG]
+--- tool_results[1] ---
+[4 documents found]
+Source: langchain.pdf, page 0
+Relevance: 0.9997
+Excerpt: LangChain Developer Harrison Chase Initial release October 2022 Stable release0.1.16[1] / 11 April 2024 Written in Python and JavaScript Type Software framework for largelanguage model applicationdevelopment License MIT License Website LangChain.com (https://langchain.com/) Repos...
+Source: langchain.pdf, page 0
+Relevance: 0.9099
+Excerpt: In April 2025, LangChain was featured in the Forbes AI 50 list.[10] LangChain's developers highlight the framework's applicability to use-cases including chatbots,[11] retrieval-augmented generation,[12] documentsummarization,[13] and synthetic data generation.[14] InfoWorld desc...
+Source: langchain.pdf, page 3
+Relevance: 0.8700
+Excerpt: 14. "Synthetic data generation | 🦜🔗 Langchain" (https://web.archive.org/web/2024030705 0554/https://python.langchain.com/docs/use_cases/data_generation). python.langchain.com.Archived from the original (https://python.langchain.com/docs/use_cases/data_generation) on 2024-03-07. Re...
+Source: langchain.pdf, page 3
+Relevance: 0.8424
+Excerpt: Retrieved 2024-07-08.6. "LangChain Expression Language" (https://blog.langchain.dev/langchain-expression-language/). langchain.dev. 2023-08-01.Retrieved 2024-07-08.7. "Introducing LangServe, the best way to deploy yourLangChains" (https://blog.langchain.dev/introducing-langserve/...
+[DEBUG] Final answer: На жаль, я не можу виконати ваш запит, оскільки у мене немає доступу до інтернету або можливості пер...
+[DEBUG]
+=== SAVE NODE ===
+[DEBUG] save_report_tool called with filename=жаль_можу_виконати_2026-04-01_094729.md
+[DEBUG] Saved to: ✅ Файл збережено: C:\Users\HF\OneDrive\Iryna\ArchivData comp WINDOWS\Курсы\RobotDreams-2026\MULTI-AGENT SYSTEMS\Lektion 5\HT Lektion 5\output\жаль_можу_виконати_2026-04-01_094729.md
+Agent: На жаль, я не можу виконати ваш запит, оскільки у мене немає доступу до інтернету або можливості переглядати зовнішні джерела. Проте, я можу надати інформацію на основі наявних внутрішніх документів.
+
+LangChain був вперше випущений у жовтні 2022 року. Це програмний фреймворк, написаний на Python та JavaScript, призначений для розробки додатків з використанням великих мовних моделей. Його ліцензія — MIT License. Джерело інформації: langchain.pdf, сторінка 0.
+
+У квітні 2025 року LangChain був включений до списку Forbes AI 50. Розробники LangChain підкреслюють застосовність фреймворку для таких випадків використання, як чат-боти, генерація з підкріпленням, підсумовування документів та генерація синтетичних даних. Джерело інформації: langchain.pdf, сторінка 0.
