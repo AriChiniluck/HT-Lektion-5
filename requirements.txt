@@ -1,0 +1,16 @@
+langchain>=1.2.0
+langchain-core>=1.2.0
+langchain-openai>=0.4
+langchain-community>=0.4
+langchain-classic>=1.0
+langchain-text-splitters>=0.3
+faiss-cpu
+rank_bm25
+sentence-transformers
+ddgs>=7.0
+trafilatura>=2.0.0
+pypdf
+pydantic>=2.12.0
+pydantic-settings>=2.12.0
+# без фіксації мінору, щоб не було проблем з сумісністю при оновленні до 2.13, 2.14 і т.д., для цього коду достатньо, бо імпорти йдуть саме з langgraph.graph і langgraph.graph.message.:
+langgraph
