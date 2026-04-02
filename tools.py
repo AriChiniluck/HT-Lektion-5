@@ -298,10 +298,13 @@ def format_knowledge_results(results: list[dict]) -> str:
     lines = [f"[{len(results)} documents found]"]
     for i, item in enumerate(results, 1):
         score = item.get("rerank_score", item.get("hybrid_score", 0.0))
+        chunk_text = item.get("text", "").strip()
         lines.append(
             f"{i}. Source: {item.get('filename', 'unknown')}, page {item.get('page', '?')}"
         )
         lines.append(f"   Relevance: {score:.4f}")
+        if chunk_text:
+            lines.append(f"   Text: {chunk_text}")
     return "\n".join(lines)
     
 
