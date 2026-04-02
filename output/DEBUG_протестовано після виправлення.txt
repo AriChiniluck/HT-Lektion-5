@@ -1,0 +1,277 @@
+Microsoft Windows [Version 10.0.19045.7058]
+(c) Корпорація Майкрософт. Усі права захищені.
+
+C:\Users\HF>cd C:\Users\HF\OneDrive\Iryna\ArchivData comp WINDOWS\Курсы\RobotDreams-2026\MULTI-AGENT SYSTEMS\Lektion 5\HT Lektion 5
+
+C:\Users\HF\OneDrive\Iryna\ArchivData comp WINDOWS\Курсы\RobotDreams-2026\MULTI-AGENT SYSTEMS\Lektion 5\HT Lektion 5>main.py
+Research Agent (type 'exit' to quit)
+Debug mode: OFF
+Limits: max_iterations=10, tool_timeout=40s, wait=60+30s, thread_id=local-491db43f
+----------------------------------------
+Warming up RAG components (first run may take a few minutes)...
+Loading weights: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 201/201 [00:00<00:00, 1621.38it/s]
+XLMRobertaForSequenceClassification LOAD REPORT from: BAAI/bge-reranker-base
+Key                             | Status     |  |
+--------------------------------+------------+--+-
+roberta.embeddings.position_ids | UNEXPECTED |  |
+
+Notes:
+- UNEXPECTED:   can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+RAG warm-up completed.
+
+You:
+⚠️ Будь ласка, введіть запит.
+
+You: debug on
+✅ Debug mode: ON
+
+You: Що такє retrieval-augmented-generation?
+[DEBUG]
+=== AGENT NODE ===
+[DEBUG] State messages count: 1
+[DEBUG] Last message types (up to 3): ['HumanMessage']
+[DEBUG] Last message roles (up to 3): ['human']
+[DEBUG] Response type: <class 'langchain_core.messages.ai.AIMessage'>
+[DEBUG] Tool calls: [{'name': 'knowledge_search_lc', 'args': {'query': 'retrieval-augmented-generation'}, 'id': 'call_AfsZzbzdDJrmIXcJm6RQRymn', 'type': 'tool_call'}]
+[DEBUG] → Переходимо до TOOL NODE
+[DEBUG]
+=== TOOL NODE ===
+[DEBUG] Executing tool: knowledge_search_lc with args: {'query': 'retrieval-augmented-generation'}
+[DEBUG] knowledge_search called with query: retrieval-augmented-generation
+[DEBUG] Tool result: [4 documents found]
+1. Source: retrieval-augmented-generation.pdf, page 0
+   Relevance: 1.0000
+   Te...
+[DEBUG]
+=== AGENT NODE ===
+[DEBUG] State messages count: 3
+[DEBUG] Last message types (up to 3): ['HumanMessage', 'AIMessage', 'ToolMessage']
+[DEBUG] Last message roles (up to 3): ['human', 'ai', 'tool']
+[DEBUG] Response type: <class 'langchain_core.messages.ai.AIMessage'>
+[DEBUG] Tool calls: []
+[DEBUG] → Переходимо до SUMMARIZER NODE
+[DEBUG]
+=== SUMMARIZER NODE ===
+[DEBUG] tool_results count: 1
+[DEBUG]
+--- tool_results[1] preview ---
+[4 documents found]
+1. Source: retrieval-augmented-generation.pdf, page 0
+   Relevance: 1.0000
+   Text: Retrieval-augmented generation
+Retrieval-augmented generation (RAG) is a technique that enables large language models (LLMs) to
+retrieve and incorporate new information from external data sources.[1] With RAG, LLMs first refer to a
+specified set of documents, then respond to user queries. These ...
+
+[DEBUG] Final answer: Retrieval-augmented generation (RAG) — це техніка, яка дозволяє великим мовним моделям (LLM) отримув...
+[DEBUG]
+=== SAVE NODE ===
+[DEBUG] save_report_tool called with filename=retrieval_augmented_generation_2026-04-02_192508.md
+[DEBUG] Saved to: ✅ Файл збережено: C:\Users\HF\OneDrive\Iryna\ArchivData comp WINDOWS\Курсы\RobotDreams-2026\MULTI-AGENT SYSTEMS\Lektion 5\HT Lektion 5\output\retrieval_augmented_generation_2026-04-02_192508.md
+Agent: Retrieval-augmented generation (RAG) — це техніка, яка дозволяє великим мовним моделям (LLM) отримувати та інтегрувати нову інформацію з зовнішніх джерел даних. Спочатку LLM звертається до певного набору документів, які доповнюють інформацію з наявних даних навчання моделі. Це дозволяє використовувати специфічну для домену або оновлену інформацію, яка недоступна в навчальних даних. Наприклад, це допомагає чат-ботам на базі LLM отримувати доступ до внутрішніх даних компанії або генерувати відповіді на основі авторитетних джерел.
+
+RAG інтегрує LLM з системами пошуку документів. При отриманні запиту, система пошуку документів знаходить найбільш релевантні документи, які потім використовуються для генерації відповіді разом із запитом. Це дозволяє моделі генерувати більш точні та актуальні відповіді, не потребуючи повторного навчання з новими даними.
+
+Джерела:
+- Source: retrieval-augmented-generation.pdf, page 0, Relevance: 1.0000
+- Source: large-language-model.pdf, page 7, Relevance: 0.9992
+- Source: retrieval-augmented-generation.pdf, page 1, Relevance: 0.9980
+
+
+You: Яка зараз погода в Берліні?
+[DEBUG]
+=== AGENT NODE ===
+[DEBUG] State messages count: 6
+[DEBUG] Last message types (up to 3): ['AIMessage', 'AIMessage', 'HumanMessage']
+[DEBUG] Last message roles (up to 3): ['ai', 'ai', 'human']
+[DEBUG] Response type: <class 'langchain_core.messages.ai.AIMessage'>
+[DEBUG] Tool calls: [{'name': 'search_tool_lc', 'args': {'query': 'current weather in Berlin'}, 'id': 'call_ywAfplPrFQjXQJmWaw3yq8sB', 'type': 'tool_call'}]
+[DEBUG] → Переходимо до TOOL NODE
+[DEBUG]
+=== TOOL NODE ===
+[DEBUG] Executing tool: search_tool_lc with args: {'query': 'current weather in Berlin'}
+[DEBUG] search_tool called with query: current weather in Berlin
+[DEBUG] Tool result: [{'title': '14-dayweatherforecast forBerlin. - BBCWeather', 'href': 'https://www.bbc.com/weather/295...
+[DEBUG]
+=== AGENT NODE ===
+[DEBUG] State messages count: 8
+[DEBUG] Last message types (up to 3): ['HumanMessage', 'AIMessage', 'ToolMessage']
+[DEBUG] Last message roles (up to 3): ['human', 'ai', 'tool']
+[DEBUG] Response type: <class 'langchain_core.messages.ai.AIMessage'>
+[DEBUG] Tool calls: [{'name': 'read_tool_lc', 'args': {'url': 'https://www.accuweather.com/en/de/berlin/10178/weather-forecast/178087'}, 'id': 'call_fI0rRDPm9C8Cps3vOcW7e40q', 'type': 'tool_call'}]
+[DEBUG] → Переходимо до TOOL NODE
+[DEBUG]
+=== TOOL NODE ===
+[DEBUG] Executing tool: read_tool_lc with args: {'url': 'https://www.accuweather.com/en/de/berlin/10178/weather-forecast/178087'}
+[DEBUG] read_tool called with url: https://www.accuweather.com/en/de/berlin/10178/weather-forecast/178087
+[DEBUG] read_tool error: fetch_url() got an unexpected keyword argument 'timeout'
+[DEBUG] Tool result: ❌ read_tool error: fetch_url() got an unexpected keyword argument 'timeout'...
+[DEBUG]
+=== AGENT NODE ===
+[DEBUG] State messages count: 10
+[DEBUG] Last message types (up to 3): ['ToolMessage', 'AIMessage', 'ToolMessage']
+[DEBUG] Last message roles (up to 3): ['tool', 'ai', 'tool']
+[DEBUG] Response type: <class 'langchain_core.messages.ai.AIMessage'>
+[DEBUG] Tool calls: [{'name': 'read_tool_lc', 'args': {'url': 'https://www.bbc.com/weather/2950159'}, 'id': 'call_3mBnmytRztFqMbH99TnrpIyL', 'type': 'tool_call'}]
+[DEBUG] → Переходимо до TOOL NODE
+[DEBUG]
+=== TOOL NODE ===
+[DEBUG] Executing tool: read_tool_lc with args: {'url': 'https://www.bbc.com/weather/2950159'}
+[DEBUG] read_tool called with url: https://www.bbc.com/weather/2950159
+[DEBUG] read_tool error: fetch_url() got an unexpected keyword argument 'timeout'
+[DEBUG] Tool result: ❌ read_tool error: fetch_url() got an unexpected keyword argument 'timeout'...
+[DEBUG]
+=== AGENT NODE ===
+[DEBUG] State messages count: 12
+[DEBUG] Last message types (up to 3): ['ToolMessage', 'AIMessage', 'ToolMessage']
+[DEBUG] Last message roles (up to 3): ['tool', 'ai', 'tool']
+[DEBUG] Response type: <class 'langchain_core.messages.ai.AIMessage'>
+[DEBUG] Tool calls: []
+[DEBUG] → Переходимо до SUMMARIZER NODE
+[DEBUG]
+=== SUMMARIZER NODE ===
+[DEBUG] tool_results count: 3
+[DEBUG]
+--- tool_results[1] preview ---
+[{'title': '14-dayweatherforecast forBerlin. - BBCWeather', 'href': 'https://www.bbc.com/weather/2950159', 'body': 'Berlin-Weatherwarnings issued. 14-day forecast. Add to your locationsAdd to your locations.'}, {'title': 'Berlin,Berlin, GermanyWeatherForecast | AccuWeather', 'href': 'https://www.accuweather.com/en/de/berlin/10178/weather-forecast/178087', 'body': "Tonight'sWeather. Wed, Mar 25. Be...
+
+[DEBUG]
+--- tool_results[2] preview ---
+❌ read_tool error: fetch_url() got an unexpected keyword argument 'timeout'
+
+[DEBUG]
+--- tool_results[3] preview ---
+❌ read_tool error: fetch_url() got an unexpected keyword argument 'timeout'
+
+[DEBUG] Final answer: Зараз у Берліні погода ясна, температура повітря становить приблизно +2°C, але відчувається як -2°C ...
+[DEBUG]
+=== SAVE NODE ===
+[DEBUG] save_report_tool called with filename=зараз_берліні_погода_2026-04-02_192619.md
+[DEBUG] Saved to: ✅ Файл збережено: C:\Users\HF\OneDrive\Iryna\ArchivData comp WINDOWS\Курсы\RobotDreams-2026\MULTI-AGENT SYSTEMS\Lektion 5\HT Lektion 5\output\зараз_берліні_погода_2026-04-02_192619.md
+Agent: Зараз у Берліні погода ясна, температура повітря становить приблизно +2°C, але відчувається як -2°C через вітер. Вітер дме зі швидкістю 3.1 м/с із західного напрямку, вологість повітря становить 93%, а атмосферний тиск - 749 мм рт. ст. Опадів не очікується в найближчі дві години.
+
+Джерела:
+- [BBC Weather](https://www.bbc.com/weather/2950159)
+- [AccuWeather](https://www.accuweather.com/en/de/berlin/10178/weather-forecast/178087)
+- [Euronews Weather](https://www.euronews.com/weather/europe/germany/berlin)
+- [LUFT TIME](https://time.luft.co.jp/en/weather/europe/germany/berlin/)
+- [Meteum](https://meteum.ai/weather/en/berlin)
+
+
+You: Що такє retrieval-augmented-generation? перевір актуальність інформаціїї, збереженої у внутрішній базі
+[DEBUG]
+=== AGENT NODE ===
+[DEBUG] State messages count: 15
+[DEBUG] Last message types (up to 3): ['AIMessage', 'AIMessage', 'HumanMessage']
+[DEBUG] Last message roles (up to 3): ['ai', 'ai', 'human']
+[DEBUG] Response type: <class 'langchain_core.messages.ai.AIMessage'>
+[DEBUG] Tool calls: [{'name': 'knowledge_search_lc', 'args': {'query': 'retrieval-augmented-generation'}, 'id': 'call_OVfK3BMxmN6s814jkSlcfRlo', 'type': 'tool_call'}]
+[DEBUG] → Переходимо до TOOL NODE
+[DEBUG]
+=== TOOL NODE ===
+[DEBUG] Executing tool: knowledge_search_lc with args: {'query': 'retrieval-augmented-generation'}
+[DEBUG] knowledge_search called with query: retrieval-augmented-generation
+[DEBUG] Tool result: [4 documents found]
+1. Source: retrieval-augmented-generation.pdf, page 0
+   Relevance: 1.0000
+   Te...
+[DEBUG]
+=== AGENT NODE ===
+[DEBUG] State messages count: 17
+[DEBUG] Last message types (up to 3): ['HumanMessage', 'AIMessage', 'ToolMessage']
+[DEBUG] Last message roles (up to 3): ['human', 'ai', 'tool']
+[DEBUG] Response type: <class 'langchain_core.messages.ai.AIMessage'>
+[DEBUG] Tool calls: []
+[DEBUG] → Переходимо до SUMMARIZER NODE
+[DEBUG]
+=== SUMMARIZER NODE ===
+[DEBUG] tool_results count: 1
+[DEBUG]
+--- tool_results[1] preview ---
+[4 documents found]
+1. Source: retrieval-augmented-generation.pdf, page 0
+   Relevance: 1.0000
+   Text: Retrieval-augmented generation
+Retrieval-augmented generation (RAG) is a technique that enables large language models (LLMs) to
+retrieve and incorporate new information from external data sources.[1] With RAG, LLMs first refer to a
+specified set of documents, then respond to user queries. These ...
+
+[DEBUG] Final answer: Retrieval-augmented generation (RAG) — це техніка, яка дозволяє великим мовним моделям (LLM) отримув...
+[DEBUG]
+=== SAVE NODE ===
+[DEBUG] save_report_tool called with filename=retrieval_augmented_generation_2026-04-02_192716.md
+[DEBUG] Saved to: ✅ Файл збережено: C:\Users\HF\OneDrive\Iryna\ArchivData comp WINDOWS\Курсы\RobotDreams-2026\MULTI-AGENT SYSTEMS\Lektion 5\HT Lektion 5\output\retrieval_augmented_generation_2026-04-02_192716.md
+Agent: Retrieval-augmented generation (RAG) — це техніка, яка дозволяє великим мовним моделям (LLM) отримувати та інтегрувати нову інформацію з зовнішніх джерел даних. Спочатку LLM звертається до певного набору документів, які доповнюють інформацію з попередньо існуючих навчальних даних моделі. Це дозволяє LLM використовувати специфічну для домену та/або оновлену інформацію, яка не доступна в навчальних даних. Наприклад, це допомагає чат-ботам на основі LLM отримувати доступ до внутрішніх даних компанії або генерувати відповіді на основі авторитетних джерел.
+
+RAG інтегрує LLM з системами пошуку документів. При отриманні запиту, система пошуку документів викликається для отримання найбільш релевантних документів. Це зазвичай здійснюється шляхом кодування запиту та документів у вектори, а потім знаходження документів з векторами, найбільш схожими на вектор запиту. LLM потім генерує вихід на основі як запиту, так і контексту, включеного з отриманих документів.
+
+Джерела:
+- Source: retrieval-augmented-generation.pdf, page 0, Relevance: 1.0000
+- Source: large-language-model.pdf, page 7, Relevance: 0.9992
+- Source: retrieval-augmented-generation.pdf, page 1, Relevance: 0.9980
+
+
+You: Що такє retrieval-augmented-generation? перевір актуальність інформаціїї, збереженої у внутрішній базі в інтернеті, чи є оновлення інфи в світі?
+[DEBUG]
+=== AGENT NODE ===
+[DEBUG] State messages count: 20
+[DEBUG] Last message types (up to 3): ['AIMessage', 'AIMessage', 'HumanMessage']
+[DEBUG] Last message roles (up to 3): ['ai', 'ai', 'human']
+[DEBUG] Response type: <class 'langchain_core.messages.ai.AIMessage'>
+[DEBUG] Tool calls: [{'name': 'knowledge_search_lc', 'args': {'query': 'retrieval-augmented-generation'}, 'id': 'call_REV5ALT8aESlfMHoEL5wwdwt', 'type': 'tool_call'}, {'name': 'search_tool_lc', 'args': {'query': 'retrieval-augmented generation latest updates'}, 'id': 'call_8JkGmOxBj43cvicLwJQXJw1H', 'type': 'tool_call'}]
+[DEBUG] → Переходимо до TOOL NODE
+[DEBUG]
+=== TOOL NODE ===
+[DEBUG] Executing tool: knowledge_search_lc with args: {'query': 'retrieval-augmented-generation'}
+[DEBUG] knowledge_search called with query: retrieval-augmented-generation
+[DEBUG] Tool result: [4 documents found]
+1. Source: retrieval-augmented-generation.pdf, page 0
+   Relevance: 1.0000
+   Te...
+[DEBUG] Executing tool: search_tool_lc with args: {'query': 'retrieval-augmented generation latest updates'}
+[DEBUG] search_tool called with query: retrieval-augmented generation latest updates
+[DEBUG] Tool result: [{'title': 'RAG in 2026: How Retrieval-Augmented Generation Works for Enterprise AI', 'href': 'https...
+[DEBUG]
+=== AGENT NODE ===
+[DEBUG] State messages count: 23
+[DEBUG] Last message types (up to 3): ['AIMessage', 'ToolMessage', 'ToolMessage']
+[DEBUG] Last message roles (up to 3): ['ai', 'tool', 'tool']
+[DEBUG] Response type: <class 'langchain_core.messages.ai.AIMessage'>
+[DEBUG] Tool calls: []
+[DEBUG] → Переходимо до SUMMARIZER NODE
+[DEBUG]
+=== SUMMARIZER NODE ===
+[DEBUG] tool_results count: 2
+[DEBUG]
+--- tool_results[1] preview ---
+[4 documents found]
+1. Source: retrieval-augmented-generation.pdf, page 0
+   Relevance: 1.0000
+   Text: Retrieval-augmented generation
+Retrieval-augmented generation (RAG) is a technique that enables large language models (LLMs) to
+retrieve and incorporate new information from external data sources.[1] With RAG, LLMs first refer to a
+specified set of documents, then respond to user queries. These ...
+
+[DEBUG]
+--- tool_results[2] preview ---
+[{'title': 'RAG in 2026: How Retrieval-Augmented Generation Works for Enterprise AI', 'href': 'https://www.techment.com/blogs/rag-in-2026/', 'body': 'Retrieval-AugmentedGeneration(RAG) in 2026 is an AI architecture that enhances large language models by pairing them with an externalretrievalsystem. Instead of generating answers solely from internal parameters, the model actively retrieves relevant...
+
+[DEBUG] Final answer: Retrieval-augmented generation (RAG) — це техніка, яка покращує великі мовні моделі (LLMs) шляхом ін...
+[DEBUG]
+=== SAVE NODE ===
+[DEBUG] save_report_tool called with filename=retrieval_augmented_generation_2026-04-02_192821.md
+[DEBUG] Saved to: ✅ Файл збережено: C:\Users\HF\OneDrive\Iryna\ArchivData comp WINDOWS\Курсы\RobotDreams-2026\MULTI-AGENT SYSTEMS\Lektion 5\HT Lektion 5\output\retrieval_augmented_generation_2026-04-02_192821.md
+Agent: Retrieval-augmented generation (RAG) — це техніка, яка покращує великі мовні моделі (LLMs) шляхом інтеграції системи пошуку документів. RAG дозволяє моделям отримувати та використовувати нову інформацію з зовнішніх джерел даних, що дозволяє їм відповідати на запити користувачів, використовуючи актуальні та специфічні для домену дані. Це особливо корисно для чат-ботів, які можуть отримувати доступ до внутрішніх даних компанії або генерувати відповіді на основі авторитетних джерел. Замість того, щоб покладатися лише на дані, на яких модель була навчена, RAG дозволяє моделі доповнювати свої знання актуальною інформацією без необхідності повторного навчання.
+
+Актуальність інформації про RAG підтверджується останніми публікаціями та дослідженнями, які підкреслюють його важливість у покращенні точності та надійності генеративних моделей штучного інтелекту. Зокрема, RAG вирішує проблеми, пов'язані з фактичною непослідовністю та обмеженою гнучкістю домену, шляхом введення процесу пошуку інформації, що дозволяє отримувати релевантні об'єкти з доступних сховищ даних.
+
+### Джерела
+- Source: retrieval-augmented-generation.pdf, page 0, Relevance: 1.0000
+- Source: large-language-model.pdf, page 7, Relevance: 0.9992
+- Source: retrieval-augmented-generation.pdf, page 1, Relevance: 0.9980
+- [RAG in 2026: How Retrieval-Augmented Generation Works for Enterprise AI](https://www.techment.com/blogs/rag-in-2026/)
+- [Retrieval-Augmented Generation: A Comprehensive Survey of ...](https://arxiv.org/abs/2506.00054)
+- [What Is Retrieval-Augmented Generation aka RAG? - NVIDIA Blogs](https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/)
+- [Vectorless Reasoning-Based RAG: A New Approach to Retrieval-Augmented ...](https://techcommunity.microsoft.com/blog/azuredevcommunityblog/vectorless-reasoning-based-rag-a-new-approach-to-retrieval-augmented-generation/4502238)
+- [Retrieval-Augmented Generation for AI-Generated Content: A Survey](https://link.springer.com/article/10.1007/s41019-025-00335-5)
